@@ -21,102 +21,78 @@
 
 <body>
 	<section class="info-line">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="info-line-row">
-						<a href="" class="info-line-link info-line-link_nounder">
-							<svg class="info-line-img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-								 viewBox="0 0 92 87" style="enable-background:new 0 0 92 87;" xml:space="preserve">
-							<g>
-								<path fill="#9fa8b5" d="M91.6,36L81,27.2c-0.6-0.5-1-1.2-1-2V6.8c0-1.6-1.3-2.8-2.8-2.8h-7.6c-1.6,0-2.8,1.3-2.8,2.8v6.4c0,0.9-1.1,1.4-1.8,0.8
-									L49.5,1.2c-0.7-0.6-1.6-0.9-2.5-0.9c-0.9,0-1.8,0.3-2.5,0.9L2.4,36c-1.5,1.2-1.9,3.4-0.9,5c1.2,1.9,3.9,2.3,5.6,0.9l36.7-30.4
-									c1.8-1.5,4.4-1.5,6.2,0l36.7,30.4c1.7,1.4,4.4,1.1,5.6-0.9C93.5,39.4,93.1,37.2,91.6,36z"/>
-								<path fill="#9fa8b5"  d="M79.8,86.1c1.6,0,2.8-1.3,2.8-2.8V49.1c0-1.9-0.8-3.7-2.2-4.9L50.6,19.7c-2-1.8-5.1-1.8-7.1,0L13.6,44.2
-									c-1.4,1.3-2.3,3.1-2.3,5v34.2c0,1.6,1.3,2.8,2.8,2.8H79.8z"/>
-							</g>
-						</svg>
-						</a>
-						<a href="" class="info-line-link">Стоматологические поликлиники</a>
-						<a href="" class="info-line-link">Euromed Kids (Медицинский центр Детский Евромед)  на Энгельса</a>
-					</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="info-line-row">
+					<a href="" class="info-line-link info-line-link_nounder">
+						<svg class="info-line-img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+							 viewBox="0 0 92 87" style="enable-background:new 0 0 92 87;" xml:space="preserve">
+						<g>
+							<path fill="#9fa8b5" d="M91.6,36L81,27.2c-0.6-0.5-1-1.2-1-2V6.8c0-1.6-1.3-2.8-2.8-2.8h-7.6c-1.6,0-2.8,1.3-2.8,2.8v6.4c0,0.9-1.1,1.4-1.8,0.8
+								L49.5,1.2c-0.7-0.6-1.6-0.9-2.5-0.9c-0.9,0-1.8,0.3-2.5,0.9L2.4,36c-1.5,1.2-1.9,3.4-0.9,5c1.2,1.9,3.9,2.3,5.6,0.9l36.7-30.4
+								c1.8-1.5,4.4-1.5,6.2,0l36.7,30.4c1.7,1.4,4.4,1.1,5.6-0.9C93.5,39.4,93.1,37.2,91.6,36z"/>
+							<path fill="#9fa8b5"  d="M79.8,86.1c1.6,0,2.8-1.3,2.8-2.8V49.1c0-1.9-0.8-3.7-2.2-4.9L50.6,19.7c-2-1.8-5.1-1.8-7.1,0L13.6,44.2
+								c-1.4,1.3-2.3,3.1-2.3,5v34.2c0,1.6,1.3,2.8,2.8,2.8H79.8z"/>
+						</g>
+					</svg>
+					</a>
+					<a href="" class="info-line-link">Стоматологические поликлиники</a>
+					<a href="" class="info-line-link">Euromed Kids (Медицинский центр Детский Евромед)  на Энгельса</a>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section class="search-service">
+	</div>
+</section>
+	<section class="search-block">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="search-service-title">Услуги</h2>
-					<div class="search-service-flex">
-						<div class="search-service-item">
-							<p class="search-service-name">Брекеты Clarity</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес, от 400 р.</p>
+					<form class="search-form">
+						<div class="search-form-top">
+							<input type="text" class="search-form-input" placeholder="Название клиники">
+							<div class="search-form-sel">
+								<select class="search-form-select">
+									<option value="" disabled="" selected="" hidden="" class="order-item-option">Частная/государственная</option>
+									<option value="first" class="order-item-option">Fisrt</option>
+									<option value="second" class="order-item-option">Second</option>
+									<option value="third" class="order-item-option">Third</option>
+								</select>
+							</div>
+							<input type="text" class="search-form-input" placeholder="Район">
+							<input type="text" class="search-form-input" placeholder="Метро">
+							<div class="search-form-sel search-form-sel_last">
+								<select class="search-form-select search-form-select">
+									<option value="" disabled="" selected="" hidden="" class="order-item-option">Специальность врача</option>
+									<option value="first" class="order-item-option">Fisrt</option>
+									<option value="second" class="order-item-option">Second</option>
+									<option value="third" class="order-item-option">Third</option>
+								</select>
+							</div>
 						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Брекеты Clarity</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес, от 400 р.</p>
+						<div class="search-form-bottom search-form-bottom_justify">
+							<div class="search-form-left">
+								<div class="search-form-sel">
+									<select class="search-form-select">
+										<option value="" disabled="" selected="" hidden="" class="order-item-option">Сортировать по...</option>
+										<option value="first" class="order-item-option">Fisrt</option>
+										<option value="second" class="order-item-option">Second</option>
+										<option value="third" class="order-item-option">Third</option>
+									</select>
+								</div>
+								<label class="search-form-label">
+									<input type="checkbox" class="search-form-check">
+									<span class="search-form-checkbox"></span>
+									<span class="search-form-text">Только с отзывами</span>
+								</label>
+							</div>
+							<button type="btn" class="search-form-btn">Найти</button>
 						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Брекеты Victory</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес</p>
-						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Брекеты Victory</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес</p>
-						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Исправление прикуса</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес, от 400 р.</p>
-						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Исправление прикуса</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес, от 400 р.</p>
-						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Лингвальные брекеты</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес, от 400 р.</p>
-						</div>
-						<div class="search-service-item">
-							<p class="search-service-name">Лингвальные брекеты</p>
-							<div class="search-service-dots"></div>
-							<p class="search-service-price">371 адрес, от 400 р.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="search-block search-block_sm">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
+					</form>
 					<div class="search-content">
 						<div class="search-content-info">
 							<div class="search-content-result">Адреса и цены: <span class="active-text">2345 клник</span></div>
-							<div class="search-content-sort">
-								<a href="" class="search-content-map">Смотреть на карте</a>
-								<div class="search-filter">
-									<p class="search-filter-text">Сортировать:</p>
-									<div class="search-form-sel search-form-sel_filter">
-										<select class="search-form-select search-form-select_filter">
-											<option value="" disabled="" selected="" hidden="" class="order-item-option">по популярности</option>
-											<option value="first" class="order-item-option">Fisrt</option>
-											<option value="second" class="order-item-option">Second</option>
-											<option value="third" class="order-item-option">Third</option>
-										</select>
-									</div>
-								</div>
-							</div>
-
+							<a href="" class="search-content-map">Смотреть на карте</a>
 						</div>
 						<div class="search-content-main">
 							<div class="search-content-item">
@@ -168,13 +144,14 @@
 										<p class="search-content-location">(Медицинский центр Детский Евромед) на Энгельса</p>
 									</div>
 									<div class="search-content-reviews">
-										<div class="clinic-price-row">
-											<p class="clinic-price-name">Съемные протезы</p>
-											<p class="clinic-price-dot"></p>
-											<p class="clinic-price-previous">от <span class="text-decor">400 р.</span></p>
-											<p class="clinic-price-current">от 400 р.</p>
+										<div class="clinic-reviews-top">
+											<div class="clinic-reviews-left">
+												<h5 class="clinic-reviews-name">Отзывы о клинике</h5>
+											</div>
 										</div>
-										<a href="" class="search-content-all">220 отзывов в этом лечении</a>
+										<p class="search-content-about">Прошло семь лет, как Л. И. Петрова протезировала мне зубы - 2 бюгельных протеза, которые никогда меня не беспокоили, и как новые по сей день. Но из-за пародонтита, пришлось лишиться нескольких зубов и протезироваться заново. Протезироваться решила, и уже начала, только у Л. И.Петровой, так как это врач высочайшей квалификации, врач от Бога. Чуткая, внимательная, общительная, настоящий профессионал своего дела. Если есть такие врачи, как Л. И.Петрова, значит, в стоматологии, всё отлично! С благодарностью.</p>
+										<a href="" class="search-content-more">Читать полностью</a>
+										<p class="search-content-date">19 Jun 2018</p>
 									</div>
 								</div>
 								<div class="search-content-right search-center">
@@ -235,13 +212,14 @@
 										<p class="search-content-location">(Медицинский центр Детский Евромед) на Энгельса</p>
 									</div>
 									<div class="search-content-reviews">
-										<div class="clinic-price-row">
-											<p class="clinic-price-name">Съемные протезы</p>
-											<p class="clinic-price-dot"></p>
-											<p class="clinic-price-previous">от <span class="text-decor">400 р.</span></p>
-											<p class="clinic-price-current">от 400 р.</p>
+										<div class="clinic-reviews-top">
+											<div class="clinic-reviews-left">
+												<h5 class="clinic-reviews-name">Отзывы о клинике</h5>
+											</div>
 										</div>
-										<a href="" class="search-content-all">220 отзывов в этом лечении</a>
+										<p class="search-content-about">Прошло семь лет, как Л. И. Петрова протезировала мне зубы - 2 бюгельных протеза, которые никогда меня не беспокоили, и как новые по сей день. Но из-за пародонтита, пришлось лишиться нескольких зубов и протезироваться заново. Протезироваться решила, и уже начала, только у Л. И.Петровой, так как это врач высочайшей квалификации, врач от Бога. Чуткая, внимательная, общительная, настоящий профессионал своего дела. Если есть такие врачи, как Л. И.Петрова, значит, в стоматологии, всё отлично! С благодарностью.</p>
+										<a href="" class="search-content-more">Читать полностью</a>
+										<p class="search-content-date">19 Jun 2018</p>
 									</div>
 								</div>
 								<div class="search-content-right search-center">

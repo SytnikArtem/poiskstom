@@ -108,8 +108,7 @@
 				height: 10px
 				background: url(../img/arrow-line.svg) no-repeat center
 				background-size: 4px 8px
-				top: 50%
-				transform: translateY(-50%)
+				bottom: 4px
 				right: -18px
 			&:last-child
 				&:after
@@ -131,9 +130,15 @@
 		justify-content: space-between
 	&-tabs
 		&-item
-			display: none
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			opacity: 0
+			pointer-events: none
 			&.active
-				display: block
+				opacity: 1
+				pointer-events: auto
 		&-row
 			display: flex
 			align-items: center
@@ -156,16 +161,55 @@
 				margin-right: 0
 		&-content
 			margin-top: 25px
+			position: relative
 	&-stars
 		&-svg
 			width: 17px
 			height: 16px
 	&-reviews
 		margin-top: 18px
+		&-content
+			margin-top: 10px
+		&-row
+			padding: 20px 0 10px 0
+			border-bottom: 1px solid #eaeaea
 		&-link
 			color: #949494
 			font-size: 12px
 			text-decoration: underline
+		&-block
+			padding: 0 30px
+			margin-top: 15px
+		&-top
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+		&-name
+			margin: 0
+			color: #526072
+			font-size: 14px
+			font-weight: 700
+			line-height: 17.93px
+		&-about
+			color: #707a89
+			font-size: 13px
+			font-weight: 600
+			line-height: 17.93px
+		&-doctor
+			text-decoration: underline!important
+			color: #949494!important
+			&:hover
+				text-decoration: none!important
+		&-text
+			color: #5d646d
+			font-size: 13px
+			font-weight: 400
+			line-height: 22px
+			margin: 10px 0 15px
+		&-date
+			color: #949494
+			font-size: 12px
+			font-weight: 400
 	&-title
 		color: #3e4a59
 		font-size: 24px
@@ -183,7 +227,6 @@
 	&-map
 		width: 100%
 		height: 270px
-		background: red
 		margin: 40px 0 20px
 	&-adress
 		color: #6a7583
@@ -247,7 +290,7 @@
 			clear: both
 			display: table
 	&-sale
-		margin-top: 25px
+		margin-top: 15px
 		&-title
 			color: #2096f3
 			font-size: 16px
@@ -350,6 +393,7 @@
 			line-height: normal
 			margin: 0
 			white-space: nowrap
+
 		&-dot
 			width: 100%
 			line-height: normal
@@ -357,9 +401,462 @@
 			border-bottom: 2px dotted #bec6d0
 			position: relative
 			top: -4px
+	&-btn
+		border-radius: 4px
+		background-color: #55adf2
+		color: #ffffff!important
+		font-size: 14px
+		font-weight: 700
+		padding: 11px 23px
+		transition: background-color .5s ease
+		display: inline-block
+		line-height: normal
+		&:hover
+			background: darken(#55adf2, 10%)
+	&-logo
+		border: 1px solid #e9ebec
 .clinic-price-social .link:after
 	content: ''
 	clear: both
 	display: table
 .text-decor
 	text-decoration: line-through
+.gallery-item
+	width: calc(50% - 5px)
+	margin-bottom: 10px
+.clinic-social ul li
+	margin-bottom: 10px
+.clinic-doctor-img
+	width: 100%
+.gallery-img
+	width: 100%
+.clinic-mobile
+	display: none
+.clinic-stars
+	flex-shrink: 0
+	width: 105px
+#map.clinic-map a
+	background: none
+.search-block
+	padding: 50px 0 10px
+.search-form
+	border-radius: 4px
+	background-color: #efefef
+	padding: 5px
+	&-top
+		display: flex
+		justify-content: space-between
+	&-bottom
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		margin-top: 5px
+	&-sel, &-input
+		width: 20%
+		margin-right: 5px
+		&_last
+			margin-right: 0
+	&-btn
+		color: #ffffff
+		font-size: 14px
+		font-weight: 700
+		height: 40px
+		line-height: 40px
+		background: #55adf2
+		border-radius: 4px
+		width: calc(20% - 5px)
+		border: none
+		outline: none
+		margin-left: 145px
+		transition: background-color .5s ease
+		&:hover
+			background: darken(#55adf2, 10%)
+	&-sel
+		position: relative
+		&:after
+			border: 4px solid transparent
+			border-top: 4px solid #9fa8b5
+			content: ''
+			position: absolute
+			top: 50%
+			right: 10px
+			display: block
+	&-select
+		width: 100%
+		border: none
+		outline: none
+		border-radius: 4px
+		padding: 0 15px
+		color: #7c848e
+		font-size: 14px
+		font-weight: 600
+		line-height: 40px
+		height: 40px
+		appearance: none
+	&-input
+		border: none
+		outline: none
+		border-radius: 4px
+		padding: 0 15px
+		color: #7c848e
+		font-size: 14px
+		font-weight: 600
+		line-height: 40px
+		height: 40px
+	&-text
+		color: #7c848e
+		font-size: 14px
+		font-weight: 600
+	&-check, &-checkbox
+		width: 16px
+		height: 16px
+		margin: 0 10px 0 0!important
+	&-check
+		display: none
+	&-checkbox
+		border-radius: 2px
+		background-color: #ffffff
+		border: none
+		outline: none
+		position: relative
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			content: ''
+			background: #2096f3 url(../img/chacked.svg) no-repeat center
+			background-size: 10px 8px
+			opacity: 0
+			transition: opacity .5s ease
+	&-label
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		position: relative
+		margin-left: 40px
+		margin-bottom: 0
+		&:first-child
+			margin-left: 0
+.search-form-input::placeholder
+	color: #7c848e!important
+.search-form-check:checked ~ .search-form-checkbox:before
+	opacity: 1
+.active-text
+	color: #2096f3
+.search-content
+	&-info
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px 0 20px
+		border-bottom: 1px solid #eaeaea
+	&-result
+		color: #3e4a59
+		font-size: 16px
+		font-weight: 700
+	&-map
+		color: #2096f3!important
+		font-size: 14px
+		font-weight: 700
+		line-height: 17.93px
+		padding-left: 20px
+		background: url(../img/pin2.svg) no-repeat left center
+		background-size: 12px 14px
+	&-item
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding: 30px 0
+		border-bottom: 1px solid #eaeaea
+		&:last-child
+			border-bottom: 0
+	&-left
+		width: 170px
+		flex-shrink: 0
+	&-right
+		width: 270px
+		flex-shrink: 0
+		padding-left: 30px
+		border-left: 1px solid #eaeaea
+	&-center
+		width: 100%
+		margin: 0 40px
+	&-name
+		color: #3e4a59
+		font-size: 24px
+		font-weight: 700
+		margin: 0
+		letter-spacing: 0.6px
+	&-city
+		font-size: 14px
+		font-weight: 600
+		line-height: 13.95px
+		margin: 0
+	&-desktop
+		margin-bottom: 25px
+	&-spec
+		color: #2096f3
+		font-size: 14px
+		font-weight: 700
+		letter-spacing: 0.4px
+		margin: 0
+		line-height: normal
+	&-years
+		color: #6a7583
+		font-size: 14px
+		font-weight: 600
+		line-height: 13.95px
+		margin: 10px 0 0 0
+	&-reviews
+		margin-top: 30px
+	&-about
+		margin-top: 20px
+		color: #5d646d
+		font-size: 13px
+		line-height: 21.92px
+		height: 65px
+		overflow: hidden
+		margin-bottom: 0
+	&-date
+		color: #949494
+		font-size: 12px
+		margin-bottom: 0
+.clinic-reviews_search
+	margin-top: 25px
+.clinic-reviews-link_search
+	text-decoration: underline!important
+	position: relative
+	top: -10px
+.search-center-title
+	color: #2096f3
+	font-size: 14px
+	font-weight: 700
+	line-height: 13.95px
+	letter-spacing: 0.8px
+	margin-top: 0
+.clinic-adress_search
+	padding-left: 30px
+.clinic-item_metro
+	padding-left: 30px
+	&:before
+		width: 14px
+		height: 14px
+		background: url(../img/metro.svg) no-repeat center
+		background-size: 14px 12px
+		top: 0
+.search-center-text
+	color: #9da1a7
+	font-size: 13px
+	line-height: 13.95px
+	margin: 25px 0 5px
+.search-center-phone
+	color: #526072
+	font-size: 18px
+	font-weight: 700
+.search-price
+	border-radius: 4px
+	background-color: #f3f3f3
+	padding: 10px 13px
+	display: inline-block
+	margin-top: 12px
+	&-text
+		color: #526072
+		font-size: 14px
+		font-weight: 700
+		margin: 0
+		line-height: 14px
+		&_big
+			font-size: 18px
+	&-value
+		color: #e92c2f
+.search-content-more
+	color: #949494
+	font-size: 12px
+	text-decoration: underline!important
+.search-content-about.active
+	height: 100%
+.search-content-text
+	color: #5d646d
+	font-size: 14px
+	line-height: 23.91px
+	margin-top: 20px
+.search-info
+	border-top: 1px solid #eaeaea
+	margin-top: 30px
+	padding-top: 30px
+	&-title
+		color: #526072
+		font-size: 18px
+		font-weight: 700
+		margin: 0 0 5px
+		letter-spacing: 0.6px
+	&-name
+		color: #6a7583
+		font-size: 14px
+		font-weight: 600
+		line-height: 13.95px
+		margin-bottom: 20px
+	&-text
+		color: #5d646d
+		font-size: 14px
+		line-height: 23.91px
+		margin-bottom: 5px
+	&-block
+		margin: 20px 0 25px
+	&-list
+		padding: 0
+		list-style: none
+		margin: 0
+	&-item
+		padding-left: 75px
+		color: #5d646d
+		font-size: 14px
+		line-height: 23.91px
+		position: relative
+		&:before
+			position: absolute
+			width: 3px
+			height: 3px
+			background: #5d646d
+			border-radius: 50%
+			content: ''
+			top: 11px
+			left: 35px
+.search-row
+	border-top: 1px solid #eaeaea
+	padding: 18px 0 18px
+	&-title
+		color: #526072
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 15px
+		letter-spacing: 0.4px
+	&-text
+		font-size: 14px
+		line-height: 23.91px
+		letter-spacing: 0.1px
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 10px
+		&_bold
+			font-weight: bold
+	&-active
+		color: #55adf2
+		font-weight: 700
+	&-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-name
+		color: #6a7583
+		font-size: 14px
+		font-weight: 600
+		line-height: 13.95px
+		margin-top: -5px
+.search-right-title
+	color: #526072
+	font-size: 18px
+	font-weight: 700
+	margin: 0 0 10px
+	letter-spacing: 1.1px
+.search-right-name
+	color: #6a7583
+	font-size: 14px
+	font-weight: 600
+	line-height: 13.95px
+	margin-bottom: 18px
+.search-form-bottom_justify
+	justify-content: space-between
+.search-form-left
+	display: flex
+	width: 40%
+	justify-content: space-between
+	.search-form-sel
+		width: 50%
+	.search-form-label
+		width: 50%
+		margin-left: 0
+		padding-left: 30px
+.search-content-img_clinic
+	border: 1px solid #e9ebec
+.search-content-location
+	color: #6a7583
+	font-size: 13px
+	line-height: 13.95px
+	margin-top: 5px
+.clinic-graf_search
+	padding-left: 30px
+	background: url(../img/time.svg) no-repeat left top
+	background-size: 14px 14px
+	margin-top: 30px
+.search-center-phone_search
+	padding-left: 30px
+	background: url(../img/phone.svg) no-repeat left center
+	background-size: 14px 14px
+	font-size: 16px
+	margin-top: 10px
+	display: inline-block
+.search-service
+	&-title
+		color: #3e4a59
+		font-size: 32px
+		font-weight: 700
+		margin: 40px 0 20px
+		letter-spacing: 1.6px
+	&-flex
+		display: flex
+		justify-content: flex-start
+		flex-wrap: wrap
+	&-item
+		width: calc(50% - 25px)
+		margin-right: 50px
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		padding: 8px 0
+		&:nth-child(2n + 2)
+			margin-right: 0
+	&-name, &-price
+		color: #2096f3
+		font-size: 14px
+		font-weight: 600
+		line-height: 14px
+		margin: 0
+		white-space: nowrap
+		flex-shrink: 0
+	&-dots
+		width: 100%
+		border-bottom: 2px dotted #2096f3
+		margin: 0 5px
+		position: relative
+		top: -2px
+.search-block_sm
+	padding-top: 20px
+.search-content-sort
+	display: flex
+	width: 500px
+	justify-content: space-between
+	align-items: center
+.search-filter
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	&-text
+		color: #a8acb1
+		font-size: 14px
+		font-weight: 600
+		margin: 0
+.search-form-sel_filter
+	width: 170px
+.search-content-all
+	color: #55adf2!important
+	font-size: 12px
+	font-weight: 600
+	text-decoration: underline!important
+	position: relative
+	top: -10px
+.search-content-mobile
+	display: none
+@import "media"

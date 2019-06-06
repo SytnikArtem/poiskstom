@@ -1,50 +1,20 @@
 // координаты маркеров
 var markersData = [
   {
-    lat: 55.747230,     // Широта
-    lng: 37.601266,    // Долгота
-    name: "Адрес 1", // Произвольное название, которое будем выводить в информационном окне
-    url: 'img/map.png'
-  },
-  {
-    lat: 55.769072,
-    lng: 37.619284,
-    name: "Адрес 2",
-    url: 'img/map.png'
-  },
-  {
-    lat: 55.752742,
-    lng: 37.648823,
-    name: "Адрес 3",
-    url: 'img/map.png'
-  },
-  {
-    lat: 55.729838,
-    lng: 37.664774,
-    name: "Адрес 4",
+    lat: 55.704462,     // Широта
+    lng: 37.641651,    // Долгота
+    name: "Москва, ул. Автозаводская, д. 16, корп. 2", // Произвольное название, которое будем выводить в информационном окне
     url: 'img/map.png'
   }
 ];
 // координаты центров городов
 var centerMaps = [
   {
-    latX: 55.755773,
-    latY: 37.617761
-  },
-  {
-    latX: 43.581509,
-    latY: 39.722882
-  },
-  {
-    latX: 45.048259,
-    latY: 38.983913
-  },
-  {
-    latX: 54.733263,
-    latY: 55.973696
+    latX: 55.704462,
+    latY: 37.641651
   }
 ]
-var map, latLng, url, name, mark, marker, thisCenter;
+var map, map2, latLng, url, name, mark, marker, thisCenter;
 function initMap() {
   thisCenterX = centerMaps[0].latX;
   thisCenterY = centerMaps[0].latY;
@@ -266,6 +236,7 @@ function initMap() {
   };
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  // map2 = new google.maps.Map(document.getElementById("map2"), mapOptions);
 
 
   // Определяем границы видимой области карты в соответствии с положением маркеров
@@ -278,6 +249,7 @@ function initMap() {
     url = markersData[i].url;
     number = markersData[i].number;
     addMarker(latLng, name, url, number);
+    addMarker2(latLng, name, url, number);
   }
 
   // Автоматически масштабируем карту так, чтобы все маркеры были в видимой области карты
@@ -287,6 +259,7 @@ function initMap() {
     this.getPanes().markerLayer.id='markerLayer';
   };
   myoverlay.setMap(map);
+  myoverlay.setMap(map2);
 
 }
 google.maps.event.addDomListener(window, "load", initMap);
@@ -297,7 +270,18 @@ function addMarker(latLng, name, url) {
     title: name,
     icon: {
       url: url,
-      scaledSize: new google.maps.Size(18, 28)
+      scaledSize: new google.maps.Size(22, 26)
+    }
+  });
+}
+function addMarker2(latLng, name, url) {
+  marker = new google.maps.Marker({
+    position: latLng,
+    map: map2,
+    title: name,
+    icon: {
+      url: url,
+      scaledSize: new google.maps.Size(22, 26)
     }
   });
 }
